@@ -2,3 +2,142 @@
     background-color: blue;
 
 }
+body {
+    background-color: #fffdf7;
+    padding: 1%;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    font-family: 'Oswald', sans-serif;
+    color: #333;
+    height: 80vh;
+}
+
+.Menu {
+    width: 20%;
+    height: 100%;
+    background-color: #e0dcdc;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    justify-content: center;
+    text-align: center;
+}
+
+.Desplegar{
+    width: 50%;
+    color: #4a4a4a;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    padding: 10px 20px; 
+    background-color: #d5bdbd;
+    border: 2px solid #d5bdbd;
+    border-radius: 5px; 
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    margin-bottom: 13%;
+}
+
+.Mostrar {
+    width: 90%;
+    color: #4a4a4a;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    padding: 10px 20px; 
+    background-color: #A9A9A9;
+    border: 2px solid #A9A9A9;
+    border-radius: 5px; 
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    margin: 6%;
+}
+
+input[type=button]:hover {
+    background-color: #d1cfcf; 
+    border-color: #d1cfcf; 
+    color: #fffdf7; 
+}
+
+
+.ContendorR {
+    width: 75%;
+    height: 100%;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-sizing: border-box;
+}
+
+.Header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #b0a8a8;
+    border-radius: 10px;
+    color: #fffdf7;
+}
+
+.Titulo h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.Programador {
+    font-size: 18px;
+    border-color: #c8c2c2;
+    border-width: 2px;
+    border-style: solid;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #ebb5b5;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.DarColor {
+    color: #6e6b6b;
+}
+
+.MostrarPrograma {
+    flex-grow: 1;
+    background-color: #eae7e7;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.Input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 2px solid #d1cfcf;
+    border-radius: 5px;
+    background-color: #f5f3f3;
+}
+
+.Enviar {
+    padding: 10px;
+    background-color: #c8bebe;
+    color: #4a4a4a;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.Enviar:hover {
+    background-color: #b0a8a8;
+}
+
+.Resultado {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f0eeee;
+    color: #4a4a4a;
+}
+
