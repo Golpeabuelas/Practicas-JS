@@ -26,11 +26,11 @@ function SoloNumeros(id){
 function calcularInteres(event) {
     event.preventDefault();
     const capital = parseFloat(document.getElementById("Capital").value);
-    const interes = 0.02; // 2% mensual
+    const interes = parseInt(document.getElementById("Interés").value);
     const periodo = parseInt(document.getElementById("Periodo").value);
 
-    const ganancia = capital * interes * periodo;
-    document.getElementById("resultado1").innerText = `Ganancia: ${ganancia.toFixed(2)}`;
+    const ganancia = capital * Math.pow(1+Math.pow(interes, - 1), periodo);
+    document.getElementById("resultado1").innerText = `Tu dinero al retirarlo: ${ganancia.toFixed(2)}`;
 }
 
 // Ejercicio 2: Comisiones
@@ -38,7 +38,7 @@ function calcularComisiones(event) {
     event.preventDefault();
     const sueldo = parseFloat(document.getElementById("Sueldo").value);
     const numVentas = parseInt(document.getElementById("NumVentas").value);
-    const comision = 0.10; // 10%
+    const comision = parseFloat(document.getElementById("Comision").value); 
 
     const totalComision = sueldo * comision * numVentas;
     const total = sueldo + totalComision;
@@ -49,9 +49,9 @@ function calcularComisiones(event) {
 function calcularDescuento(event) {
     event.preventDefault();
     const subtotal = parseFloat(document.getElementById("Subtotal").value);
-    const descuento = 0.15; // 15%
+    const descuento = parseInt(document.getElementById("Descuento").value); 
 
-    const total = subtotal - (subtotal * descuento);
+    const total = subtotal - (subtotal * Math.pow(descuento, -1));
     document.getElementById("resultado3").innerText = `Total a pagar: ${total.toFixed(2)}`;
 }
 
