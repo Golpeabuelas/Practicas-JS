@@ -19,7 +19,35 @@ function MostrarPrograma(Indice){
 }
 
 function SoloNumeros(id){
-    id.value = id.value.replace(/[^0-9]/g, '');
+    let valor = id.value;
+    let auxiliar = "";
+    let SoloNumeros = true;
+
+    for(let i = 0; i < valor.length; i++){
+        if(/[0-9]/.test(valor.charAt(i))){
+            auxiliar += valor.charAt(i);
+        } else{
+            SoloNumeros = false;
+            break;
+        }
+    }
+
+    if(SoloNumeros == false){
+        auxiliar = "";
+        for(let i = 0; i < (valor.length - 1); i++){
+            auxiliar += valor.charAt(i);
+        }
+    }
+
+    id.value = auxiliar;
+}
+
+function Borrar(){
+    let Inputs = document.getElementsByClassName("Input");
+
+    for(let i = 0; i < Inputs.length; i++){
+        Inputs[i].value = Inputs[i].defaultValue;
+    }
 }
 
 // Ejercicio 1: Interés Compuesto
@@ -93,7 +121,7 @@ function palabrasANumeros(event) {
             case 'siete': return 7;
             case 'ocho': return 8;
             case 'nueve': return 9;
-            default: return -1; // No es un número
+            default: return -1; 
         }
     });
     document.getElementById("resultado6").innerText = `Resultados: ${numeros.join(', ')}`;
@@ -121,23 +149,23 @@ function calcularHorasExtras(event) {
 // Ejercicio 8: Utilidad Anual
 function calcularUtilidad(event) {
     event.preventDefault();
-    const antiguedad = parseInt(document.getElementById("Antiguedad").value);
-    const salario = parseFloat(document.getElementById("Salario").value);
-    let porcentaje;
+    const Antiguedad = parseInt(document.getElementById("Antiguedad").value);
+    const Salario = parseFloat(document.getElementById("Salario").value);
+    let Porcentaje;
 
-    if (antiguedad < 1) {
-        porcentaje = 0.05; // 5%
-    } else if (antiguedad < 2) {
-        porcentaje = 0.07; // 7%
-    } else if (antiguedad < 5) {
-        porcentaje = 0.10; // 10%
-    } else if (antiguedad < 10) {
-        porcentaje = 0.15; // 15%
+    if (Antiguedad < 1) {
+        Porcentaje = 0.05; 
+    } else if (Antiguedad < 2) {
+        Porcentaje = 0.07; 
+    } else if (Antiguedad < 5) {
+        Porcentaje = 0.10; 
+    } else if (Antiguedad < 10) {
+        Porcentaje = 0.15; 
     } else {
-        porcentaje = 0.20; // 20%
+        Porcentaje = 0.20; 
     }
 
-    const utilidad = salario * porcentaje;
+    const utilidad = Salario * Porcentaje;
     document.getElementById("resultado8").innerText = `Utilidad Anual: ${utilidad.toFixed(2)}`;
 }
 
@@ -146,8 +174,10 @@ function calcularUtilidad(event) {
 // Ejercicio 0: Eliminación de etiquetas peligrosas
 function eliminarEtiquetas(event) {
     event.preventDefault();
-    const htmlInput = document.getElementById("HTMLInput").value;
-    const sanitizedHTML = htmlInput.replace(/<script[^>]*>[\s\S]*?<\/script>/gi, '');
-    document.getElementById("resultado0").innerText = `HTML Limpio: ${sanitizedHTML}`;
+
+    const Input = document.getElementById("HTMLInput").value;
+    const NoScript = Input.replace(/<script[^>]*>[\s\S]*?<\/script>/gi, '');
+    const NoLink = NoScript.replace(/<link[^>]*>/gi, '');
+    document.getElementById("resultado0").innerText = `HTML Limpio: ${NoLink}`;
 }
 

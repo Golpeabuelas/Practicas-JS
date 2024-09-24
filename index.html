@@ -43,10 +43,11 @@
             <!-- Programa 1: Interés Compuesto -->
             <div class="ProgramaMostrado" id="Programa1" style="display:none;">
                 <form id="InteresCompuesto" onsubmit="calcularInteres(event)">
-                    <input type="number" class="Input" id="Capital" placeholder="Ingresa tu capital actual" oninput="SoloNumeros(this)" required>
-                    <input type="number" class="Input" id="Interés" placeholder="¿Qué interés maneja tu banco?" oninput="SoloNumeros(this)" required>
-                    <input type="number" class="Input" id="Periodo" placeholder="¿Cuántos periodos lo piensas dejar?" oninput="SoloNumeros(this)" required>
+                    <input type="text" class="Input Decorado" id="Capital" placeholder="Ingresa tu capital actual" oninput="SoloNumeros(this)" required>
+                    <input type="text" class="Input Decorado" id="Interés" placeholder="¿Qué interés maneja tu banco?" oninput="SoloNumeros(this)" required>
+                    <input type="text" class="Input Decorado" id="Periodo" placeholder="¿Cuántos periodos lo piensas dejar?" oninput="SoloNumeros(this)" required>
                     <input type="submit" class="Enviar" value="Calcular">
+                    <input type="button" class="Enviar" value="Borrar" onclick="Borrar()">
                     <div id="resultado1"></div>
                 </form>
             </div>
@@ -54,10 +55,11 @@
             <!-- Programa 2: Comisiones -->
             <div class="ProgramaMostrado" id="Programa2" style="display:none;">
                 <form id="ComisionVentas" onsubmit="calcularComisiones(event)">
-                    <input type="number" class="Input" id="Sueldo" placeholder="Ingresa tu sueldo mensual" oninput="SoloNumeros(this)" required>
-                    <input type="number" class="Input" id="NumVentas" placeholder="Cuanto ingresaste con ventas en el mes" oninput="SoloNumeros(this)" required>
-                    <input type="number" class="Input" id="Comision" placeholder="Porcentaje de comisión por ventas" oninput="SoloNumeros(this)" required>
+                    <input type="text" class="Input Decorado" id="Sueldo" placeholder="Ingresa tu sueldo mensual" oninput="SoloNumeros(this)" required>
+                    <input type="text" class="Input Decorado" id="NumVentas" placeholder="Cuanto ingresaste con ventas en el mes" oninput="SoloNumeros(this)" required>
+                    <input type="text" class="Input Decorado" id="Comision" placeholder="Porcentaje de comisión por ventas" oninput="SoloNumeros(this)" required>
                     <input type="submit" class="Enviar" value="Calcular">
+                    <input type="button" class="Enviar" value="Borrar" onclick="Borrar()">
                     <div id="resultado2"></div>
                 </form>
             </div>
@@ -65,9 +67,10 @@
             <!-- Programa 3: Descuento -->
             <div class="ProgramaMostrado" id="Programa3" style="display:none;">
                 <form id="DescuentoCompra" onsubmit="calcularDescuento(event)">
-                    <input type="number" class="Input" id="Subtotal" placeholder="Total de compra" oninput="SoloNumeros(this)" required>
-                    <input type="number" class="Input" id="Descuento" placeholder="Descuento que te ofrecen" oninput="SoloNumeros(this)" required>
+                    <input type="text" class="Input Decorado" id="Subtotal" placeholder="Total de compra" oninput="SoloNumeros(this)" required>
+                    <input type="text" class="Input Decorado" id="Descuento" placeholder="Descuento que te ofrecen" oninput="SoloNumeros(this)" required>
                     <input type="submit" class="Enviar" value="Calcular">
+                    <input type="button" class="Enviar" value="Borrar" onclick="Borrar()">
                     <div id="resultado3"></div>
                 </form>
             </div>
@@ -75,12 +78,13 @@
             <!-- Programa 4: Calificación Final -->
             <div class="ProgramaMostrado" id="Programa4" style="display:none;">
                 <form id="CalificacionFinal" onsubmit="calcularCalificacion(event)">
-                    <input type="number" class="Input" id="Parcial1" placeholder="Calificación Parcial 1" oninput="SoloNumeros(this)" required>
-                    <input type="number" class="Input" id="Parcial2" placeholder="Calificación Parcial 2" oninput="SoloNumeros(this)" required>
-                    <input type="number" class="Input" id="Parcial3" placeholder="Calificación Parcial 3" oninput="SoloNumeros(this)" required>
-                    <input type="number" class="Input" id="Examen" placeholder="Calificación del Examen Final" oninput="SoloNumeros(this)" required>
-                    <input type="number" class="Input" id="Trabajo" placeholder="Calificación del Trabajo Final" oninput="SoloNumeros(this)" required>
+                    <input type="text" class="Input Decorado" id="Parcial1" placeholder="Calificación Parcial 1" oninput="SoloNumeros(this)" required>
+                    <input type="text" class="Input Decorado" id="Parcial2" placeholder="Calificación Parcial 2" oninput="SoloNumeros(this)" required>
+                    <input type="text" class="Input Decorado" id="Parcial3" placeholder="Calificación Parcial 3" oninput="SoloNumeros(this)" required>
+                    <input type="text" class="Input Decorado" id="Examen" placeholder="Calificación del Examen Final" oninput="SoloNumeros(this)" required>
+                    <input type="text" class="Input Decorado" id="Trabajo" placeholder="Calificación del Trabajo Final" oninput="SoloNumeros(this)" required>
                     <input type="submit" class="Enviar" value="Calcular">
+                    <input type="button" class="Enviar" value="Borrar" onclick="Borrar()">
                     <div id="resultado4"></div>
                 </form>
             </div>
@@ -88,8 +92,9 @@
             <!-- Programa 5: Edad -->
             <div class="ProgramaMostrado" id="Programa5" style="display:none;">
                 <form onsubmit="calcularEdad(event)">
-                    <input type="date" class="Input" id="FechaNacimiento" placeholder="Fecha de nacimiento" required>
+                    <input type="date" class="Input Decorado" id="FechaNacimiento" placeholder="Fecha de nacimiento" required>
                     <input type="submit" class="Enviar" value="Calcular Edad">
+                    <input type="button" class="Enviar" value="Borrar" onclick="Borrar()">
                     <div id="resultado5"></div>
                 </form>
             </div>
@@ -97,8 +102,9 @@
             <!-- Programa 6: Palabras a Números -->
             <div class="ProgramaMostrado" id="Programa6" style="display:none;">
                 <form onsubmit="palabrasANumeros(event)">
-                    <input type="text" class="Input" id="Palabras" placeholder="Escribe el nombre de tu número" required>
+                    <input type="text" class="Input Decorado" id="Palabras" placeholder="Escribe el nombre de tu número" required>
                     <input type="submit" class="Enviar" value="Convertir">
+                    <input type="button" class="Enviar" value="Borrar" onclick="Borrar()">
                     <div id="resultado6"></div>
                 </form>
             </div>
@@ -106,9 +112,10 @@
             <!-- Programa 7: Horas Extras -->
             <div class="ProgramaMostrado" id="Programa7" style="display:none;">
                 <form onsubmit="calcularHorasExtras(event)">
-                    <input type="number" class="Input" id="HorasTrabajadas" placeholder="Horas trabajadas" oninput="SoloNumeros(this)" required>
-                    <input type="number" class="Input" id="PagoPorHora" placeholder="Pago por hora" oninput="SoloNumeros(this)" required>
+                    <input type="text" class="Input Decorado" id="HorasTrabajadas" placeholder="Horas trabajadas" oninput="SoloNumeros(this)" required>
+                    <input type="text" class="Input Decorado" id="PagoPorHora" placeholder="Pago por hora" oninput="SoloNumeros(this)" required>
                     <input type="submit" class="Enviar" value="Calcular">
+                    <input type="button" class="Enviar" value="Borrar" onclick="Borrar()">
                     <div id="resultado7"></div>
                 </form>
             </div>
@@ -116,9 +123,10 @@
             <!-- Programa 8: Utilidad Anual -->
             <div class="ProgramaMostrado" id="Programa8" style="display:none;">
                 <form onsubmit="calcularUtilidad(event)">
-                    <input type="number" class="Input" id="Antiguedad" placeholder="Antigüedad en años" oninput="SoloNumeros(this)" required>
-                    <input type="number" class="Input" id="Salario" placeholder="Salario mensual" oninput="SoloNumeros(this)" required>
+                    <input type="text" class="Input Decorado" id="Antiguedad" placeholder="Antigüedad en años" oninput="SoloNumeros(this)" required>
+                    <input type="text" class="Input Decorado" id="Salario" placeholder="Salario mensual" oninput="SoloNumeros(this)" required>
                     <input type="submit" class="Enviar" value="Calcular">
+                    <input type="button" class="Enviar" value="Borrar" onclick="Borrar()">
                     <div id="resultado8"></div>
                 </form>
             </div>
@@ -131,9 +139,10 @@
             <!-- Programa 0: Eliminación de etiquetas peligrosas -->
             <div class="ProgramaMostrado" id="Programa0" style="display:none;">
                 <form onsubmit="eliminarEtiquetas(event)">
-                    <textarea id="HTMLInput" placeholder="Ingresa tu HTML aquí"></textarea>
+                    <textarea class="Input Decorado" id="HTMLInput" placeholder="Ingresa tu HTML aquí"></textarea>
                     <input type="submit" class="Enviar" value="Limpiar HTML">
-                    <div id="resultado0"></div>
+                    <input type="button" class="Enviar" value="Borrar" onclick="Borrar()">
+                    <div id="resultado0" class="Input" val></div>
                 </form>
             </div>
         </div>
